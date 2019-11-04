@@ -1,73 +1,80 @@
-<---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.--->
---<m--::: Inicio do Projeto=={2019-10-23}
+# **Projeto BV Financeira {001}:**
+>**Tratamento  de  Dados**
+> Sistema: {2BFree  -  2BCollector}
+> Inicio: {2019-10-23} 
+> BV  -  Financeira
+> 
+>> **Estrutura básica:**
+> {ETL} {dados  estruturado}--{ETL}--{DW organizado_limpo}=={BI--Rel--KPI}
+> Aumentar a performance dos relatórios de sistema e simplificar/padronizar os dados.
+> 
+ >
+>>**Informações:**
+		>Replicação: Não, direto na produção
+		>Vincular/Transferir para outro BD: Não, fora do projeto
+		>Banco de Dados: PostgreSQL  {plpgsql}
 >
---<m--::: Padrao de Criacao de Tabelas {Documentacao}--{Estrutura Basica} :::-->--
-{
-    <Nota:
-        lembre-se, estamos direto no banco de producao, 
-            é importante cuidado e performance na execucao dos codigos !!!
-    >
-    <Projeto:
-        BV - Financeira - {2019-10-23}
-        Sistema {2BFree - 2BCollector}
-        Tratamento de Dados {ETL}
-        {dados estruturado}--{ETL}--{DW organizado_limpo}=={BI--Rel--KPI}
-    >
-    <Banco:
-        PostgreSQL {plpgsql}
-    >
-    <Contato:
-        Marcio Ferreira Junior 
-        Cel.: 016 9 8830 8470
-        LinkedIn: {https://www.linkedin.com/in/marciofjr/}
-    >
-}
-<Padrão: 
+>>**Contato:**
+>Marcio  Ferreira  Junior
+>Cel.:  016  9  8830  8470
+>[Perfil  no  LinkedIn  {marciofjr}](https://www.linkedin.com/in/marciofjr/)
+>
+>
+    Nota:
+    	lembre-se,  estamos  direto  no  banco  de  produção,
+    		é  importante  o cuidado  e  a garantia da performance  na  execução  dos  códigos  !!!
+
+## **Padrão de Criação de Tabelas:**
+
+**Padrão Estabelecido:**
+
     {01-ini}_{02-projeto.numeracao}_{03-tipo}_{04-tipo.numeracao}_{05-letra.origem}_{06-complemento.descricao}
+
+**Descrição do Padrão:**
+>{01-ini} = {tmp_mfj}
+>>tmp = sigla padrão utilizada para criação de tabelas fora do sistema {equipe do sistema}
+>>mfj = temos várias tabelas {tmp} criadas pela {equipe do sistema}, mfj para identificar o projeto
 >
-<Descricao:
-    {01-ini} = {tmp_mfj}
-    _
-    {02-projeto.numeracao} = {
-        01,
-        02,
-        03, ... de 01 ate 99
-        00 == somente para tabela global
-    }
-    _
-    {03-tipo}:
-        dp = {de-para}
-        en = {enum enumeracao}
-        tb = {tabela fato}
-        id = {identificador performance}
-        vf = {verificacao validacao}
-        gb = {global projeto==00}
-        ex = {execucao - ordem executar}
-    _
-    {04-tipo.numeracao} = {
-        01,
-        02,
-        03, ... de 01 ate 99
-    }
-    _
-    {05-letra.origem} = {
-        a,
-        b,
-        c, ... de a ate z
-    }
-    _
-    {06-complemento.descricao} = {
-        descricao ou complemento, de forma resumida do que se trata a tabela
-        [cliente, contrato, foto_dia, telefones, carteira, parametrizados, ...]
-    }
-<---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.--->
---<m--::: Padrao {numeracao} :::-->--
-{
-    <byte flg = Status Campo {off / on / stand-by}:
-        0 = {Inativo}
-        1 = {Ativo}
-        2 = {Suspenso}
-}
+>{02-projeto.numeracao}:
+>>01, = {no caso utilizaremos o número 01, nosso primeiro nesse banco de dados}
+>>02,
+>>03,  ...  de  01  ate  99
+>>00 == somente  para  tabela  global
+>
+>{03-tipo}:
+>>dp = {de-para}
+>>en = {enum  enumeracao}
+>>tb = {tabela  fato}
+>>id = {identificador  performance}
+>>vf = {verificacao  validacao}
+>>gb = {global  projeto==00}
+>>ex = {execucao  -  ordem  executar}
+>
+>{04-tipo.numeracao}: {complemento do tipo}
+>>01,
+>>02,
+>>03,  ...  de  01  ate  99
+>
+>{05-letra.origem}: {sub-divisão}
+>>a,
+>>b,
+>>c,  ...  de  a  ate  z
+>
+>{06-complemento.descricao}: {resumo, breve descrição}
+>>descrição  ou  complemento,  de  forma  resumida  do  que  se  trata  a  tabela
+>>[cliente,  contrato,  foto_dia,  telefones,  carteira,  parametrizados,  ...]
+
+
+### **Padrao  {numeracao}:**
+>
+> | Flag = Status Campo {Off / On / Stand-By}: |
+> |--|--|
+> |0 = {Inativo}|
+> |1 = {Ativo}|
+> |2 = {Suspenso}|
+> |type=byte|
+
+
 
 <---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.--->
 --<m--::: VINCULOS {REFERENCES} :::-->--
