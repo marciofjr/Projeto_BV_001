@@ -1,3 +1,3 @@
-*gitignore
-*/01.insert_table/insert_formatador.xlsx
-*/01.insert_table/tmp.sql
+.gitignore
+./01.insert_table/insert_formatador.xlsx
+./01.insert_table/tmp.sql
