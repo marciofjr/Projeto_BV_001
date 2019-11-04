@@ -437,4 +437,4 @@ C --> D
 >>>[d_defasagem] = dias sem acionamento { [hoje] - [dat_data_hist] }  
 >>>[cod_user] = numero documento cliente {padraoBD}  
 >  
-#### #end  
+#### #end
