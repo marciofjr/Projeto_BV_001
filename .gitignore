@@ -1,5 +1,5 @@
 $ cat .gitignore
 # Ignorar arquivos específicos
-.gitignore
+*.gitignore
 *insert_formatador.xlsx
 *tmp.sql
