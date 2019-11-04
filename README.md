@@ -75,12 +75,12 @@ C --> D
 >  
 ### **Padrao {numeracao}:**  
 >  
-> | Flag = Status Campo {Off / On / Stand-By}:|  
-> |--|--|  
-> |0 = {Inativo}|  
+> | Flag = Status Campo {Off / On / Stand-By}:  |  
+> |--|--  |  
+> |0 = {Inativo}  |  
 > |1 = {Ativo}|
-> |2 = {Suspenso}|  
-> |type=byte|  
+> |2 = {Suspenso}  |  
+> |type=byte  |  
 >  
 ### **Vínculos {Referências - FK}:**  
 >  
@@ -400,11 +400,11 @@ C --> D
 >  
 >06-A = {tmp_mfj_01_tb_06_a_foto_diaria}  
 >>Tabela Foto Diaria - FATO:  
->>>--:::{Key}:::--  
+>>>--:::{**Key**}:::--  
 >>>[dt_foto] = identificador {data==foto}  
 >>>[id_foto] = identificador {origem==tmp_mfj_01_id_03_a_foto_diaria}  
 >>>[dat_ent_contr] = data entrada do contrato {consta no id_foto --- repetir}  
->>>--:::{Identificadores}:::--  
+>>>--:::{**Identificadores**}:::--  
 >>>[per_ent_contr] = dias do contrato no escritorio {[hoje] - [dat_ent_contr]}  
 >>>[id_contrato] = identificador {origem==tmp_mfj_01_id_02_a_contrato}  
 >>>[id_cliente] = identificador {origem==tmp_mfj_01_id_01_a_cliente}  
@@ -412,8 +412,8 @@ C --> D
 >>>[id_status_ctt] = identificador {origem==tmp_mfj_01_dp_03_a_ctt_status}  
 >>>[id_fx_flux_estoq] = identificador  {origem==tmp_mfj_01_dp_09_b_resumo_fx_entrada_fluxo}  
 >>>[id_atraso] = identificador {origem==tmp_mfj_01_dp_06_a_fx_atraso}  
->>>[id_historico] = identificador {principal}   -- Ultimo ID no dia da Foto
->>>--:::{Parcela}:::--  
+>>>[id_historico] = identificador {principal}   -- Ultimo ID no dia da Foto  
+>>>--:::{**Parcela**}:::--  
 >>>[atraso] = atraso atual do contrato {conforme menor parcela vencida - no dia foto}  
 >>>[menor_vcto] = menor vencto {usado para calculo de atraso}  
 >>>[maior_vcto] = maior vencto {pc - para conhecimento}  
@@ -428,7 +428,7 @@ C --> D
 >>>[vlr_risco_parc] = valor do risco {soma todas as parcelas abertas}  
 >>>[vlr_vencido] = valor da soma das parcelas vencidas {pc - atualizacao}  
 >>>[vlr_a_vencer] = valor da soma das parcelas nao vencidas  
->>>--:::{Historico}:::--  
+>>>--:::{**Historico**}:::--  
 >>>[id_cod_hst] = identificador {origem==tmp_mfj_01_dp_07_a_codigo_historico}  
 >>>[dat_data_hist] = data da ultima ocorrencia {padraoBD}  
 >>>[d_defasagem] = dias sem acionamento { [hoje] - [dat_data_hist] }  
