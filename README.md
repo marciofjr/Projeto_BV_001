@@ -84,7 +84,7 @@ C --> D
 >  
 ### **Vínculos {Referências - FK}:**  
 >  
->dp_references:  
+>**dp**_references:  
 >>id_carteira = {tmp_mfj_01_dp_01_a_carteira}  
 >>id_prod = {tmp_mfj_01_dp_02_a_produto}  
 >>id_status_ctt = {tmp_mfj_01_dp_03_a_ctt_status}  
@@ -94,16 +94,16 @@ C --> D
 >>id_cod_hst = {tmp_mfj_01_dp_07_a_codigo_historico}  
 >>id_idade = {tmp_mfj_01_dp_08_a_fx_idade}  
 >  
->id_references:  
+>**id**_references:  
 >>id_cliente = {tmp_mfj_01_id_01_a_cliente}  
 >>id_contrato = {tmp_mfj_01_id_02_a_contrato}  
 >  
 ### **Tabelas {Resumo Criadas}:**  
 >  
->gb_Tabelas:  
+>**gb**_Tabelas:  
 >>01-A = {tmp_mfj_00_gb_01_a_calendario}  
 >  
->dp_Tabelas:  
+>**dp**_Tabelas:  
 >>01-A = {tmp_mfj_01_dp_01_a_carteira}  
 >>02-A = {tmp_mfj_01_dp_02_a_produto}  
 >>03-A = {tmp_mfj_01_dp_03_a_ctt_status}  
@@ -115,12 +115,12 @@ C --> D
 >>09-A = {tmp_mfj_01_dp_09_a_fx_entrada_fluxo}  
 >>09-B = {tmp_mfj_01_dp_09_b_resumo_fx_entrada_fluxo}  
 >  
->id_Tabelas:  
+>**id**_Tabelas:  
 >>01-A = {tmp_mfj_01_id_01_a_cliente}  
 >>02-A = {tmp_mfj_01_id_02_a_contrato}  
 >>03-A = {tmp_mfj_01_id_03_a_foto_diaria}  
 >>>  
->tb_Tabelas:  
+>**tb**_Tabelas:  
 >>01-A = {tmp_mfj_01_tb_01_a_cliente}  
 >>02-A = {tmp_mfj_01_tb_02_a_contrato_basico}  
 >>03-A = {tmp_mfj_01_tb_03_a_parcela_resumo_contrato}  
@@ -128,10 +128,10 @@ C --> D
 >>04-B = {tmp_mfj_01_tb_04_b_historico_ult_ocorr_ctt}  
 >>05-A = {tmp_mfj_01_tb_05_a_boleto_basico}  
 >>>  
->ex_Execucao:  
+>**ex**_Execucao:  
 >>01-A = {tmp_mfj_01_ex_01_a_update_foto}  
 >>>  
->Anotacao_Analisar_depois:  
+>**Anotacao_Analisar_depois:**  
 >>... nada por hora  
 >  
 ### **EX - Execucao {Detalhes}**  
