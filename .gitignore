@@ -3,3 +3,4 @@ $ cat .gitignore
 *.gitignore
 *insert_formatador.xlsx
 *tmp.sql
+*projeto_bv.sql
