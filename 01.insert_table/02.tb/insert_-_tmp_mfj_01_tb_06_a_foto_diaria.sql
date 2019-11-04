@@ -233,7 +233,7 @@ SELECT
     tmp01.id_carteira,
     tmp01.id_status_ctt,
     tmp01.id_fx_flux_estoq,
-    COALESCE(tmp03.id_atraso,0) AS id_atraso,
+    COALESCE(tmp03.id_atraso,1) AS id_atraso,
     COALESCE(m_hst.id_historico,0) AS id_historico,
     --:::{Parcela}:::--
     COALESCE(tmp03.atraso,0) AS atraso,
